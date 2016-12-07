@@ -51,4 +51,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperBound" lowerBound="1"
         eType="#//Integer" defaultValueLiteral=""/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Package">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listElements" upperBound="-1"
+        eType="#//Element"/>
+  </eClassifiers>
 </ecore:EPackage>
