@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SmallUML/src" modelPluginID="SmallUML" modelName="Smalluml"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SMALLUML/src" modelPluginID="SMALLUML" modelName="Smalluml"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
-  <foreignModel>smalluml.ecore</foreignModel>
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>file:/C:/Users/ugo/workspace2/SMALLUML/model/smalluml.ecore</foreignModel>
   <genPackages prefix="Smalluml" disposableProviderFactory="true" ecorePackage="smalluml.ecore#/">
+    <genDataTypes ecoreDataType="smalluml.ecore#//String"/>
+    <genDataTypes ecoreDataType="smalluml.ecore#//Integer"/>
+    <genDataTypes ecoreDataType="smalluml.ecore#//Real"/>
+    <genDataTypes ecoreDataType="smalluml.ecore#//Boolean"/>
     <genClasses ecoreClass="smalluml.ecore#//Class">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Class/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Class/Operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Class/Attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Class/SuperClass"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Element"/>
+    <genClasses ecoreClass="smalluml.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//NamedElement/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Operation"/>
+    <genClasses ecoreClass="smalluml.ecore#//Attribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Attribute/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Type"/>
+    <genClasses ecoreClass="smalluml.ecore#//BooleanV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//BooleanV/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//StringV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//StringV/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//RealV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//RealV/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//IntegerV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//IntegerV/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Enumeration">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Enumeration/enumValue"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Association">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Association/From"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Association/To"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Association/cardFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Association/cardTo"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Cardinalite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Cardinalite/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smalluml.ecore#//Cardinalite/upperBound"/>
+    </genClasses>
+    <genClasses ecoreClass="smalluml.ecore#//Package">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smalluml.ecore#//Package/listElements"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
